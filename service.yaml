@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80 # The port exposed by the service
+      targetPort: 80 # The port the container is listening on
+  type: NodePort # Or NodePort if you're not using a cloud provider with a Load Balancer
