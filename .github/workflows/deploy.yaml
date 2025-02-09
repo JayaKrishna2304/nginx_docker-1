@@ -37,13 +37,13 @@ jobs:
 
       - name: Authenticate GitHub
         run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/JayaKrishna2304/nginx_docker-1.git
+          git config --global user.email "jayakrishnasuddapalli@gmail.com"
+          git config --global user.name "JayaKrishna2304"
+          git remote set-url origin https://x-access-token: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@github.com/JayaKrishna2304/nginx_docker-1.git
 
       - name: Update Deployment File with New Tag
         run: |
-          sed -i 's|image: jayakrishnasuddapalli/nginx-app:.*|image: jayakrishnasuddapalli/nginx-app:${{ env.IMAGE_TAG }}|' deployment.yaml
+          sed -i "s|image: jayakrishnasuddapalli/nginx-app:.*|image: jayakrishnasuddapalli/nginx-app:${{ env.IMAGE_TAG }}|" deployment.yaml
           git add deployment.yaml
           git commit -m "Updated deployment image tag to ${{ env.IMAGE_TAG }}"
           git push origin main
