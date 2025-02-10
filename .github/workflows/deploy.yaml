@@ -18,6 +18,7 @@ jobs:
 
       - name: Set Image Tag
         run: echo "IMAGE_TAG=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+             echo "echo "Exporting IMAGE_TAG: $(date +'%Y%m%d%H%M%S')""
         shell: bash
 
       - name: Log in to Docker Hub
