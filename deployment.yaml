@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: jayakrishnasuddapalli/nginx-app:main-1d3924f
+          image: jayakrishnasuddapalli/nginx-app:main-fb282c4
           ports:
             - containerPort: 80
