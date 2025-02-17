@@ -52,7 +52,7 @@ jobs:
           /opt/sonar-scanner/bin/sonar-scanner \
             -Dsonar.projectKey=my_html_project-12345 \
             -Dsonar.sources=. \
-            -Dsonar.host.url=http://your-sonarqube-server:9000 \
+            -Dsonar.host.url=http://localhost:9000 \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
       - name: Build Project
